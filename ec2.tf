@@ -1,5 +1,9 @@
+variable "region" {
+  type = string
+}
+
 provider "aws" {
-  region     = "${var.region}"
+  region     = var.region
 }
 
 resource "aws_instance" "terraform_cloud" {
