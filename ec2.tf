@@ -1,3 +1,8 @@
+variable "region" {
+  type = string
+  default = ""
+}
+
 provider "aws" {
   region     = var.region
 }
