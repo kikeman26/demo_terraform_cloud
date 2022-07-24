@@ -18,6 +18,6 @@ data "aws_ami" "my_ami" {
 }
 
 resource "aws_instance" "terraform_cloud" {
-    ami = data.aws_ami.my_ami
+    ami = data.aws_ami.my_ami.id
     instance_type = "t2.micro"
 }
